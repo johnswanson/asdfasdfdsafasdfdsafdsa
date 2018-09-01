@@ -1,0 +1,13 @@
+version: 2
+jobs:
+  build:
+    steps:
+      - checkout
+      - echo "foo"
+    docker:
+      - image: ubuntu:latest
+
+workflows:
+  workflow:
+    jobs:
+      - "build"
